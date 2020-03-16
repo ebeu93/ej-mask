@@ -12,12 +12,26 @@ app.use(bodyParser.urlencoded({
 }));
 
 function detectword(stringmsg) {
-    if(stringmsg.includes("약국")){
-        return "스마트 약국"
-    }else {
-        return stringmsg
+    if(stringmsg.includes("검색")){
+        return "성공"
+    }
+    else if(stringmsg.includes("약국")){
+        {
+            "keyboard": {
+              "type": "buttons",
+              "buttons": [
+                "메뉴1",
+                "메뉴2",
+                "메뉴3",
+              ]
+            }
+          }
+    }
+    else {
+        return "오류입니다"
     }
 }
+
 
 reactword = function (keymsg, msg, callback) {
     var answer = '';
