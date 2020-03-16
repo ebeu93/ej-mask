@@ -15,18 +15,6 @@ function detectword(stringmsg) {
     if(stringmsg.includes("검색")){
         return "성공"
     }
-    else if(stringmsg.includes("약국")){
-        {
-            "keyboard": {
-              "type": "buttons",
-              "buttons": [
-                "메뉴1",
-                "메뉴2",
-                "메뉴3",
-              ]
-            }
-          }
-    }
     else {
         return "오류입니다"
     }
